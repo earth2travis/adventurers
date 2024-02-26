@@ -6,9 +6,9 @@
 npx create-next-app@latest adventurers --typescript --tailwind --eslint
 ```
 
-- `src/` directory: No
-- App Router: Yes
-- Import alias: Yes
+- **`src/` directory**: No
+- **App Router**: Yes
+- **Default Import Alias**: Yes
 
 ## Push to Github
 
