@@ -61,3 +61,28 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
 ```
+
+## Create Start Page
+
+```bash
+npx v0 add i0dnTdQjbuq
+```
+
+## Add Button
+
+```bash
+npx shadcn-ui@latest add button
+```
+
+```tsx page.tsx
+import Link from 'next/link';
+import { buttonVariants } from '@/components/ui/button';
+```
+
+```html
+      <div className="flex justify-center">
+        <Link href="/start" className={buttonVariants({ variant: 'outline' })}>
+          Create Character
+        </Link>
+      </div>
+```
