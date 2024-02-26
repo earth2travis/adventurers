@@ -55,8 +55,11 @@ export default function Start() {
             </p>
           </div>
           <div className="flex justify-center">
-            <Link href="/" className={buttonVariants({ variant: 'outline' })}>
-              Home
+            <Link
+              href="/race"
+              className={buttonVariants({ variant: 'outline' })}
+            >
+              Choose A Race
             </Link>
           </div>
         </div>
