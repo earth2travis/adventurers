@@ -27,3 +27,37 @@ npx shadcn-ui@latest init
 - **Style**: New York
 - **Color**: Slate
 - **CSS Variables**: Yes
+
+## Import Inter as FontSans
+
+### Import font in `layout.tsx`
+
+```ts
+import { Inter as FontSans } from 'next/font/google';
+```
+
+```ts
+import { cn } from '../lib/utils';
+
+const fontSans = FontSans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
+```
+
+```html
+<body className={cn( 'min-h-screen bg-background font-sans antialiased',
+fontSans.variable )} >
+```
+
+### Configure `theme.extend.fontFamily` in `tailwind.config.js`
+
+```ts
+const { fontFamily } = require('tailwindcss/defaultTheme');
+```
+
+```ts
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+      },
+```
