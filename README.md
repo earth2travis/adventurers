@@ -68,13 +68,17 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 npx v0 add i0dnTdQjbuq
 ```
 
+- Add `app/start` directory
+- Move file to `app/start`
+- Rename file `page.tsx`
+
 ## Add Button
 
 ```bash
 npx shadcn-ui@latest add button
 ```
 
-```tsx page.tsx
+```tsx start/page.tsx
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 ```
@@ -86,3 +90,45 @@ import { buttonVariants } from '@/components/ui/button';
         </Link>
       </div>
 ```
+
+## Create Race Page
+
+```bash
+npx v0 add JSLQ5AldELH
+```
+
+- Add `app/race` directory
+- Move file to `app/race`
+- Rename file `page.tsx`
+
+## Add Dropdown Menu
+
+```bash
+npx shadcn-ui@latest add dropdown-menu
+```
+
+```tsx race/page.tsx
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+```
+
+```tsx
+<DropdownMenu>
+  <DropdownMenuTrigger>Race</DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuItem>Human</DropdownMenuItem>
+    <DropdownMenuItem>Half-Orc</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+```
+
+## Configure Project on Vercel
+
+- Import [adventurers](https://github.com/earth2travis/adventurers) Git Repository
+- [https://adventurers.vercel.app/](https://adventurers.vercel.app/)
